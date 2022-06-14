@@ -11,5 +11,6 @@ class Lesson extends Model
     use SoftDeletes;
     protected $table='lessons';
     protected $primaryKey = 'id';
+    protected $fillable=['lesson_name','date_start','date_end'];
     
 }

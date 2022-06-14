@@ -11,4 +11,5 @@ class Schedule extends Model
     use SoftDeletes;
     protected $table='schedules';
     protected $primaryKey = 'id';
+    protected $fillable=['lesson_id','weekday','time_start','time_end'];
 }
