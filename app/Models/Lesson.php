@@ -12,5 +12,10 @@ class Lesson extends Model
     protected $table='lessons';
     protected $primaryKey = 'id';
     protected $fillable=['lesson_name','date_start','date_end'];
-    
+
+    public function schedule()
+    {
+        return $this->HasMany(Schedule::class,'lesson_id');
+    }
 }
+

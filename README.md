@@ -26,9 +26,11 @@ DB_DATABASE=fitpal
 DB_USERNAME=root
 DB_PASSWORD=
 
-4. Ejecutamos la migraciones que nos creara las tablas.
+4. Ejecutamos la migraciones y lo seeders.
 
 php artisan migrate
+php artisan db:seed --class=LessonSeeder
+php artisan db:seed --class=ScheduleSeeder
 
 5. Corremos el proyecto con el servidor que viene en composer
 
