@@ -28,7 +28,7 @@ class ScheduleController extends Controller
               //validar los datos
               $validate = \Validator::make($params_array, [
                   'lesson_id' => 'required|integer',
-                  'weekday' => 'required|integer',
+                  'weekday' =>  'required|integer|min:1|max:7',
                   'time_start' => 'required|date_format:H:i',
                   'time_end' => 'required|date_format:H:i'
               ]);
@@ -91,7 +91,7 @@ class ScheduleController extends Controller
             //validar datos
             $validate = \Validator::make($params_array, [
                 'lesson_id' => 'required|integer',
-                'weekday' => 'required|integer',
+                'weekday' => 'required|integer|min:1|max:7',
                 'time_start' => 'required|date_format:H:i',
                 'time_end' => 'required|date_format:H:i'
             ]);
