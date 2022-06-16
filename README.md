@@ -19,6 +19,8 @@ git clone https://github.com/david1066/prueba_fitpal.git
 
 3. Revisamos el archivo .env que tenga correctamente las credenciales (usuario y contraseña)y creamos una base de datos con el nombre fitpal directamente con el administrador de base de datos.
 
+En este ejemplo subí el .env al repositorio, pero no sé deberia hacer
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -36,6 +38,6 @@ php artisan db:seed --class=ScheduleSeeder
 
 php artisan serve
 
-6. En el navegador abrimos la ruta
+6. En el navegador abrimos la ruta para ver la documentacion
 
-http://127.0.0.1:8000
+http://127.0.0.1:8000/docs
