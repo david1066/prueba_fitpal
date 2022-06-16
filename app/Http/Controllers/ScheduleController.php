@@ -7,25 +7,7 @@ use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+   
 
     /**
      * Store a newly created resource in storage.
@@ -86,28 +68,7 @@ class ScheduleController extends Controller
           return response()->json($data, $data['code']);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Schedule  $schedule
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Schedule $schedule)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Schedule  $schedule
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Schedule $schedule)
-    {
-        //
-    }
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -189,7 +150,7 @@ class ScheduleController extends Controller
         //obligamos a que sea numerico
         if(is_numeric($id) && is_numeric($lesson_id)){
             //evitamos el sql injeccion col el id = ? and lesson_id = ?
-            $schedule = Schedule::whereraw('id = ? and lesson_id = ?', [$lesson_id,$id])->first();
+            $schedule = Schedule::whereraw('id = ? and lesson_id = ?', [$id,$lesson_id])->first();
             if (!empty($schedule)) {
     
                 //borrarlo
